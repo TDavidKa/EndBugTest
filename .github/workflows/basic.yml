@@ -1,0 +1,12 @@
+name: Say Hi
+
+on: 
+  workflow_dispatch:
+  
+jobs:
+  greet:
+    name: Say Hi to User
+    runs-on: ubuntu-latest
+    steps:
+      - name: This part is optional
+        run: echo "hiiiiiii"
