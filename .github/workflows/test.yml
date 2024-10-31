@@ -1,0 +1,18 @@
+name: pre-commit
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+repos:
+  repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v4.3.0
+  hooks: 
+    - id: check-for-large-files
+      name: Check for Large Files
+      args: ['--maxkb=200']
+    - id: detect-aws-credentials
+      name: Check for AWS Credentials
+      args: ['--allow-missing-credentials']
